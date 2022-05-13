@@ -20,8 +20,8 @@ class CreateTrainsTable extends Migration
             $table->string('arrival_station', 50);
             $table->dateTime('departure_time');
             $table->dateTime('arrival_time');
-            $table->integer('train_code')->unsigned();
-            $table->integer('number_of_carriages')->unsigned();
+            $table->unsignedInteger('train_code')->unique();
+            $table->unsignedInteger('number_of_carriages');
             $table->boolean('in_time');
             $table->boolean('deleted');
             $table->timestamps();

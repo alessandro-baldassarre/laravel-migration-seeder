@@ -1,1 +1,153 @@
-//
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('/img/train.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+div.container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 5rem;
+    justify-content: center;
+
+    div.train-card.delay{
+        background-color: #dd9f00;
+    }
+
+    div.train-card.deleted{
+        background-color: #cb0707;
+    }
+
+    div.train-card{
+        width: calc((100% / 3) - 2rem );
+        margin: 1rem;
+        background-color: #001848;
+        border-radius: 12px;
+        color: white;
+        padding: 1rem 0;
+
+        div.train-company{
+            text-align: center;
+            margin-bottom: 1.5rem;
+
+            span.train-company-title{
+                text-transform: uppercase;
+
+            }
+        }
+
+        div.departure-station{
+            margin: 0 2.5rem 1rem 2.5rem;
+
+            span.departure-station-title{
+                display: inline-block;
+                width: calc(20% - 10px);
+                margin-right: 5px;
+
+
+            }
+
+            span.departure-station-description{
+                display: inline-block;
+                width: 80%;
+                color: black;
+                padding: .3rem;
+                background-color: white;
+                border-radius: 6px;
+            }
+        }
+
+        div.arrival-station{
+            margin: 0 2.5rem 1rem 2.5rem;
+
+            span.arrival-station-title{
+                display: inline-block;
+                width: calc(20% - 10px);
+                margin-right: 5px;
+
+            }
+
+            span.arrival-station-description{
+                display: inline-block;
+                width: 80%;
+                color: black;
+                padding: .3rem;
+                background-color: white;
+                border-radius: 6px;
+            }
+        }
+
+        div.date.delay{
+            background-color: #dfb242;
+        }
+
+        div.date.deleted{
+            background-color: #d14646;
+        }
+
+        div.date{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            padding: 1.5rem .2rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: .75rem;
+            background-color: #20345E;
+            border-radius: 12px;
+
+            div.departure-date{
+                width: 50%;
+
+                p{
+                    font-size: 1rem;
+                    margin-top: .5rem;
+                }
+
+            }
+
+            div.arrival-date{
+                width: 50%;
+
+                p{
+                    margin-top: .5rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        div.details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: left;
+            padding: 1rem;
+
+            div{
+                width: 100%;
+                margin-bottom: .5rem;
+                font-size: .75rem;
+                text-transform: uppercase;
+            }
+
+            a.details-button{
+                padding: .25rem .5rem;
+                background-color: white;
+                color: black;
+                border-radius: 12px;
+                text-decoration: none;
+
+            }
+
+        }
+    }
+}

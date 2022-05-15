@@ -18,7 +18,7 @@ $today = Carbon::today();
          $arrival_date =  new Carbon($train->arrival_time);
         @endphp
 
-        <div class="train-card">
+<div class="train-card @if (!$train->in_time && !$train->deleted) delay  @endif @if ($train->deleted) deleted @endif" >
 
             <div class="train-company">
                 <span class="train-company-title">{{ $train->train_company }}</span>
@@ -34,17 +34,36 @@ $today = Carbon::today();
                 <span class="arrival-station-description">{{ $train->arrival_station }}</span>
             </div>
 
-            <div class="date">
-                <div class="departure-date">{{ $departure_date->hour}}:{{ $departure_date->minute}} </div>
-                <div class="arrival-date">{{ $arrival_date->hour}}:{{ $arrival_date->minute}} </div>
+            <div class="date @if (!$train->in_time && !$train->deleted) delay  @endif @if ($train->deleted) deleted @endif">
+                <div class="departure-date">
+                    <span class="departure-date-title">departure</span>
+                    <p>{{ $departure_date->hour}}:{{ $departure_date->minute}}</p>
+                </div>
+                <div class="arrival-date">
+                    <span class="arrival-date-title">arrival</span>
+                    <p>{{ $arrival_date->hour}}:{{ $arrival_date->minute}}</p>
+                </div>
             </div>
 
             <div class="details">
-                <div class="in-time">{{ $train->in_time }}</div>
-                <div class="deleted">{{ $train->deleted }}</div>
+                <div>
+
+                    @if (!$train->in_time && !$train->deleted)
+                        <p>* delay</p>
+                    @endif
+
+                    @if ($train->deleted)
+                        <p>* deleted</p>
+                    @endif
+
+                </div>
+
+                <a href="#" class="details-button">Go To Train</a>
+
             </div>
 
-            <button>Go To Train</button>
+
+
         </div>
 
         @endforeach

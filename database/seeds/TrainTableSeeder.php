@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Train;
 
-class TrainSeeder extends Seeder
+class TrainTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,6 @@ class TrainSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Train::class, 1000)->create();
     }
 }

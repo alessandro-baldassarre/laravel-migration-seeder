@@ -1,4 +1,4 @@
-<?php
++<?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
@@ -22,8 +22,8 @@ $factory->define(Train::class, function (Faker $faker) {
         'train_company' => $faker->company,
         'departure_station' => $faker->city,
         'arrival_station' => $faker->city,
-        'departure_time' => $faker->dateTimeBetween('now', '+1 day'),
-        'arrival_time' => $faker->dateTimeBetween('+1 day', '+2 day'),
+        'departure_time' => $faker->dateTimeBetween('-3 hour', '-1 hour'),
+        'arrival_time' => $faker->dateTimeBetween('now', '+1 hour'),
         'train_code' => $faker->unique()->randomNumber(5, true),
         'number_of_carriages' => $faker->randomNumber(3, false),
         'in_time' => $faker->boolean(),

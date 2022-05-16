@@ -6,19 +6,18 @@ $today = Carbon::today();
 
 @extends('layouts.main')
 
-@section('title', 'Trains')
+@section('title', 'Train')
 
 @section('main-content')
     <div class="container">
 
-        @foreach ($trains as $train)
 
         @php
          $departure_date =  new Carbon($train->departure_time);
          $arrival_date =  new Carbon($train->arrival_time);
         @endphp
 
-        <div class="train-card @if (!$train->in_time && !$train->deleted) delay  @endif @if ($train->deleted) deleted @endif" >
+<div class="train-card @if (!$train->in_time && !$train->deleted) delay  @endif @if ($train->deleted) deleted @endif" >
 
             <div class="train-company">
                 <span class="train-company-title">{{ $train->train_company }}</span>
@@ -58,15 +57,13 @@ $today = Carbon::today();
 
                 </div>
 
-                <a href="{{route("trains.show", $train->id)}}" class="details-button">Go To Train</a>
+                <a href="#" class="details-button">Go To Train</a>
 
             </div>
 
 
 
         </div>
-
-        @endforeach
     </div>
 @endsection
 

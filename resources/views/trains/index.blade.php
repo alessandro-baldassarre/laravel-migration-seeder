@@ -67,6 +67,11 @@ $today = Carbon::today();
         </div>
 
         @endforeach
+
+        <div class="pagination-links">
+            {{$trains->links()}}
+        </div>
+
     </div>
 @endsection
 

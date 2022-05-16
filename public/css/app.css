@@ -142,3 +142,29 @@ div.container div.train-card div.details a.details-button {
   text-decoration: none;
 }
 
+div.container div.pagination-links {
+  padding-top: 2rem;
+}
+
+div.container div.pagination-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+div.container div.pagination-links ul a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+div.container div.pagination-links ul span {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+

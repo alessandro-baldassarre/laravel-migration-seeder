@@ -11,7 +11,7 @@ class TrainController extends Controller
     public function index(){
 
 
-        return view('trains.index',['trains' => Train::paginate(12)]);
+        return view('trains.index',['trains' => Train::paginate(15)]);
 
     }
 

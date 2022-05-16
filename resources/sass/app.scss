@@ -9,6 +9,29 @@ body{
     background-image: url('/img/train.png');
     background-size: cover;
     background-position: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header{
+    padding: 2rem;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        .header-links{
+            a{
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: black;
+            }
+        }
+        .header-title{
+            text-align: center;
+            h1{
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 
@@ -158,6 +181,7 @@ div.container{
         ul{
             display: flex;
             list-style-type: none;
+            align-items: center;
 
             a{
                 margin: 0 .5rem;
@@ -166,7 +190,7 @@ div.container{
                 font-size: 1.5rem;
             }
 
-            span{
+            li.active {
                     margin: 0 .5rem;
                     text-decoration: none;
                     color: white;
@@ -179,3 +203,4 @@ div.container{
 
     }
 }
+

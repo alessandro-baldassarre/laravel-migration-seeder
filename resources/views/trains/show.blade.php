@@ -9,7 +9,7 @@ $today = Carbon::today();
 @section('title', 'Train')
 
 @section('main-content')
-    <div class="container">
+    <div class="container single-train">
 
 
         @php
@@ -57,7 +57,7 @@ $today = Carbon::today();
 
                 </div>
 
-                <a href="#" class="details-button">Go To Train</a>
+                <a href="{{route("trains.index")}}" class="details-button">Back To Trains</a>
 
             </div>
 

@@ -8,6 +8,31 @@ body {
   background-image: url("/img/train.png");
   background-size: cover;
   background-position: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  padding: 2rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .header-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+}
+
+header nav .header-title {
+  text-align: center;
+}
+
+header nav .header-title h1 {
+  text-transform: uppercase;
 }
 
 div.container {
@@ -149,6 +174,7 @@ div.container div.pagination-links {
 div.container div.pagination-links ul {
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
 
 div.container div.pagination-links ul a {
@@ -158,7 +184,7 @@ div.container div.pagination-links ul a {
   font-size: 1.5rem;
 }
 
-div.container div.pagination-links ul span {
+div.container div.pagination-links ul li.active {
   margin: 0 0.5rem;
   text-decoration: none;
   color: white;
